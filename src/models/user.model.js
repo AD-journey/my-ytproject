@@ -79,7 +79,7 @@ userSchema.methods.generateAccessToken = function(){
             username: this.username,
             fullName: this.fullName
         },
-        "chai-aur-code",
+        process.env.ACCESS_TOKEN_SECRET,
         {
             expiresIn: "1d"
         }
@@ -92,7 +92,7 @@ userSchema.methods.generateRefreshToken = function(){
             _id: this._id,
             
         },
-        "chai-aur-backend",
+        process.env.REFRESH_TOKEN_SECRET,
         {
             expiresIn: "10d"
         }

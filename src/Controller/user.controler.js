@@ -67,14 +67,14 @@ const userRegister = asyncHandler(async (req, res) => {
   //   coverImageLocalPath = req.files.coverImage[0].path;
   // }
 
-  console.log("email: ", email, fullName, password, username);
+  console.log("email: ", email, fullName, password, username ,avatarlocalpath);
   if (!avatarlocalpath) {
     throw new ApiError(400, "Avatar is requierd");
   }
 
   const avatar = await fileCoudinary(avatarlocalpath);
   const coverImage = await fileCoudinary(coverImageLocalPath);
-
+console.log(avatar ,coverImage) 
   if (!avatar) {
     throw new ApiError(400, "Avatar file is most required");
   }

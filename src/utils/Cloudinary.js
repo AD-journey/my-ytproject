@@ -2,9 +2,9 @@ import {v2 as cloudinary} from 'cloudinary';
 import fs from "fs"
           
 cloudinary.config({ 
-  cloud_name: "dkrsmfvuc", 
-  api_key: "789989316855571", 
-  api_secret:"NC1e8uoto_I4h-e89GA_QLkymXM"
+  cloud_name:"dkrsmfvuc" , 
+  api_key:"789989316855571" , 
+  api_secret: "NC1e8uoto_I4h-e89GA_QLkymXM"
 });
     
 const fileCoudinary = async (localpath)=>{
@@ -15,7 +15,7 @@ const fileCoudinary = async (localpath)=>{
     const ressponse = await cloudinary.uploader.upload(localpath,
      { resource_type:"auto"})
  
-    //  console.log("file is uploaded on cloudinary" ,ressponse.url)
+    //  console.log(`file is uploaded on cloudinary` ,ressponse.url)
     fs.unlinkSync(localpath)
      return ressponse
  
