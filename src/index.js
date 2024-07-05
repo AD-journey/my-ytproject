@@ -6,22 +6,22 @@ import dotenv from "dotenv";
 
 import { app } from "./app.js";
 // import { router } from "./routes/user.route.js"
-
+    
 dotenv.config({
      path:"./.env"
 })
-
+  
   
 
   app.get("/gate" , (req , res )=>{
-    res.send(`hi i am rununig at `)
+    res.send(`hi i am rununig at ${process.env.CORS_ORIGIN}`)
   })
-const Port = 3000;
+
 
 connectDB()
-.then(()=>{
-      app.listen(Port, ()=>{
-           console.log(`The port is running on port ${Port} `)
+.then(()=>{ 
+      app.listen(process.env.PORT || 3000, ()=>{
+           console.log(`The port is running on port ${process.env.PORT} `)
       })
 })
 .catch((err)=>{

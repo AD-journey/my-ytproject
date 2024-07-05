@@ -3,12 +3,13 @@ import cookieParser from "cookie-parser"
 import cors from "cors"
 import morgan from "morgan"
 
+// const BASE_URL= process.env.BASE_URL
 const app = express()
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
     credentials: true,
    
-})) 
+}))   
     
   
 app.use(express.json({limit: "16kb"}))
