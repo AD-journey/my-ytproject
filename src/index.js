@@ -1,6 +1,6 @@
 
 
-import express from "express"
+
 import connectDB from "./db/Database.js";
 import dotenv from "dotenv";
 
@@ -12,6 +12,10 @@ dotenv.config({
 })
 
   
+
+  app.get("/gate" , (req , res )=>{
+    res.send(`hi i am rununig at ${process.env.PORT}`)
+  })
 const Port = 3000;
 
 connectDB()
