@@ -14,7 +14,7 @@ dotenv.config({
   
 
   app.get("/gate" , (req , res )=>{
-    res.send(`hi i am rununig at ${process.env.PORT}`)
+    res.send(`hi i am rununig at `)
   })
 const Port = 3000;
 
