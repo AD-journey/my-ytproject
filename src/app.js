@@ -6,7 +6,7 @@ import morgan from "morgan"
 // const BASE_URL= process.env.BASE_URL
 const app = express()
 app.use(cors({
-    origin:process.env.CORS_ORIGIN,
+    origin:"https://my-ytproject.onrender.com",
     credentials: true,
    
 }))   
